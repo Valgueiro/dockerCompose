@@ -3,7 +3,7 @@ version: '3'
 services:
 
   mysql-dev:
-    image: mysql:8.0.2
+    image: mysql:5.7.22
     environment:
       MYSQL_ROOT_PASSWORD: BHU*nji9
       MYSQL_DATABASE: ucloud
@@ -13,7 +13,7 @@ services:
       - "./my.conf:/etc/mysql/conf.d/config-file.cnf"
       - "./data:/var/lib/mysql:rw"
   # client:
-  #   image: mysql:8.0.2
+  #   image: mysql:5.7.22
   #   depends_on:
   #     - mysql-dev
   #   command: mysql -uroot -pBHU*nji9 -hmysql-dev ucloud 
